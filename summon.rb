@@ -1,5 +1,5 @@
 class Summon < Formula
-  desc "A command-line tool to make working with secrets easier"
+  desc "Tool to make working with secrets easier"
   homepage "https://github.com/conjurinc/summon"
   url "https://github.com/conjurinc/summon/releases/download/v0.3.2/summon_v0.3.2_darwin_amd64.tar.gz"
   version "0.3.2"
