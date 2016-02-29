@@ -1,9 +1,12 @@
+VERSION = "0.3.3"
+SHA = "6d8eedcc6141d425d9107fe639e229f145044d840662eb793344958e7c845968"
+
 class Summon < Formula
   desc "Tool to make working with secrets easier"
   homepage "https://github.com/conjurinc/summon"
-  url "https://github.com/conjurinc/summon/releases/download/v0.3.2/summon_v0.3.2_darwin_amd64.tar.gz"
+  url "https://github.com/conjurinc/summon/releases/download/v#{VERSION}/summon_v#{VERSION}_darwin_amd64.tar.gz"
   version "0.3.2"
-  sha256 "2d98e687a65223ec81c950d8d3f7877b7161fc88cd66e2cd85418e03cf9baf3d"
+  sha256 SHA
 
   bottle :unneeded
 
