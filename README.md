@@ -1,10 +1,10 @@
-# homebrew-packages
+# homebrew-tools
 
 [Homebrew](http://brew.sh/) formulas for different Conjur tooling.
 
 ## Usage
 
 ```
-brew tap conjurinc/<app>
+brew tap conjurinc/tools
 brew install <app>
 ```
