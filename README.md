@@ -1,4 +1,10 @@
-# homebrew-summon
+# homebrew-packages
 
-[Homebrew](http://brew.sh/) formula for [Summon](https://github.com/conjurinc/summon),
-a command-line tool to make working with secrets easier.
+[Homebrew](http://brew.sh/) formulas for different Conjur tooling.
+
+## Usage
+
+```
+brew tap conjurinc/<app>
+brew install <app>
+```
