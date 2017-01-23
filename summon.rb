@@ -1,5 +1,5 @@
-VERSION = "0.6.0"
-SHA = "235af39c84f9fb690690347135896324f926185fb18f9d8c4cac8059db175baa"
+VERSION = "0.6.2"
+SHA = "c005220186ad6404031c069361e80f2f3da389e1a06278ab025ab80f47659688"
 
 class Summon < Formula
   desc "Tool to make working with secrets easier"
