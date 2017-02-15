@@ -6,6 +6,7 @@ class Apprentice < Formula
 #  sha256 "e4349cd72036447ce9758f9937848ef1636301d5ed390a48c3d22306b9d6fe05"
 
   depends_on :python if MacOS.version <= :snow_leopard
+  depends_on :pandoc
 
   resource "progressbar2" do
     url "https://files.pythonhosted.org/packages/93/e7/e1223370a6a9c685c76049460c0c7fa90862195a79d436a86de636ef156f/progressbar2-3.12.0.tar.gz"
