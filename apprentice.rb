@@ -3,9 +3,9 @@ class Apprentice < Formula
 
   desc "Management tool for Conjur evaluation images, training materials and tutorials."
   homepage "https://github.com/conjurinc/apprentice"
-  url "https://github.com/conjurinc/apprentice/archive/v0.0.5.tar.gz"
-  version "0.0.5"
-  sha256 "d324e2b883933d5b33b1a889cb0f9a79367365a5ec91a3325b05856c8d62b705"
+  url "https://github.com/conjurinc/apprentice/archive/v0.1.0.tar.gz"
+  version "0.1.0"
+  sha256 "ea7d398d290693b0351c0a94fe6a025ecd4324b917344af2386ff02797e05a7c"
 
   depends_on :python if MacOS.version <= :snow_leopard
 
