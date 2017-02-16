@@ -5,7 +5,7 @@ class Apprentice < Formula
   homepage "https://github.com/conjurinc/apprentice"
   url "https://github.com/conjurinc/apprentice/archive/v0.0.5.tar.gz"
   version "0.0.5"
-  sha256 "b9e7c4b5b77fe1b655a11e746d982703df93dceb219ae96934a90b7b58a8c846"
+  sha256 "d324e2b883933d5b33b1a889cb0f9a79367365a5ec91a3325b05856c8d62b705"
 
   depends_on :python if MacOS.version <= :snow_leopard
 
