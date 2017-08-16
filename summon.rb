@@ -1,10 +1,10 @@
-VERSION = "0.6.4"
-SHA = "28767f28ac6f4e33e5e2bad9f40d2989b51e04ef09c78c88cff28e3f03781481"
+VERSION = "0.6.5"
+SHA = "9c239cf593e302737e4565a9233a0856b35b3c81ad32b04d718505a10ba51e62"
 
 class Summon < Formula
-  desc "Tool to make working with secrets easier"
-  homepage "https://github.com/conjurinc/summon"
-  url "https://github.com/conjurinc/summon/releases/download/v#{VERSION}/summon_v#{VERSION}_darwin_amd64.tar.gz"
+  desc "CLI tool that provides on-demand secrets access for common DevOps tools."
+  homepage "https://github.com/cyberark/summon"
+  url "https://github.com/cyberark/summon/releases/download/v#{VERSION}/summon-darwin-amd64.tar.gz"
   version VERSION
   sha256 SHA
 
