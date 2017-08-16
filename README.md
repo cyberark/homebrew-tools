@@ -1,10 +1,10 @@
 # homebrew-tools
 
-[Homebrew](http://brew.sh/) formulas for different Conjur tooling.
+[Homebrew](http://brew.sh/) formulas for CyberArk tools.
 
 ## Usage
 
 ```
-brew tap conjurinc/tools
-brew install <app>
+brew tap cyberark/tools
+brew install summon  # or whatever you like
 ```
