@@ -1,5 +1,5 @@
-VERSION = "0.6.5"
-SHA = "3e60ee735152d9487b932f460fb91ecd6173c346dd755cc5ddf20f2bb24f9b56"
+VERSION = "0.6.6"
+SHA = "dfbccbc484dba027e4998924174a16cd6b1cc5127ad54dbd900a73d047554c9e"
 
 class Summon < Formula
   desc "CLI tool that provides on-demand secrets access for common DevOps tools."
