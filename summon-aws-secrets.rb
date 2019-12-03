@@ -1,5 +1,5 @@
 class SummonAwsSecrets < Formula
-  desc "Conjur provider for AWS Secrets Manager"
+  desc "AWS Secrets Manager provider for Summon"
   homepage "https://github.com/cyberark/summon-aws-secrets"
   url "https://github.com/cyberark/summon-aws-secrets/releases/download/v0.3.0/summon-aws-secrets-darwin-amd64.tar.gz"
   version "0.3.0"
@@ -11,6 +11,6 @@ class SummonAwsSecrets < Formula
   end
 
   test do
-    system lib/"summon"/"summon-aws-secrets", "-V"
+    system lib/"summon"/"summon-aws-secrets", "-v"
   end
 end
