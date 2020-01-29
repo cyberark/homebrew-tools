@@ -2,16 +2,16 @@
 class SecretlessBroker < Formula
   desc "Secures your apps by making them Secretless"
   homepage "https://secretless.io"
-  version "1.4.2"
+  version "1.5.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/cyberark/secretless-broker/releases/download/v1.4.2/secretless-broker_1.4.2_darwin_amd64.tar.gz"
-    sha256 "42999230c817edb3def74c136b89a283b4817455656dde59250ad1c974e28152"
+    url "https://github.com/cyberark/secretless-broker/releases/download/v1.5.0/secretless-broker_1.5.0_darwin_amd64.tar.gz"
+    sha256 "38576a4aa7f919343cece5e61e4817ea6140b5b74f81dddb3912d305bf97c413"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/cyberark/secretless-broker/releases/download/v1.4.2/secretless-broker_1.4.2_linux_amd64.tar.gz"
-      sha256 "b88df1ab07863cfde97161fb6024b6a8937b39f4e95d957cc6e50c79438f20d2"
+      url "https://github.com/cyberark/secretless-broker/releases/download/v1.5.0/secretless-broker_1.5.0_linux_amd64.tar.gz"
+      sha256 "6b85ac6721780f2c2d4b9a9dbc448290016455c071598805821a72d96f8555de"
     end
   end
 
