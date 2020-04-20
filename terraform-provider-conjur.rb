@@ -18,7 +18,7 @@ class TerraformProviderConjur < Formula
   depends_on "terraform"
 
   def install
-    bin.install "terraform-provider-conjur_0.3.1"
+    bin.install "terraform-provider-conjur_v0.3.1"
   end
 
   def caveats; <<~EOS
@@ -38,6 +38,6 @@ class TerraformProviderConjur < Formula
 
   test do
     # Running bin directly gives error, exit code 1
-    system "#{bin}/terraform-provider-conjur_0.3.1", "-h"
+    system "#{bin}/terraform-provider-conjur_v0.3.1", "-h"
   end
 end
