@@ -2,38 +2,42 @@
 class TerraformProviderConjur < Formula
   desc "Terraform provider for CyberArk Conjur"
   homepage "https://github.com/cyberark/terraform-provider-conjur"
-  version "0.3.0"
+  version "0.3.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.3.0/terraform-provider-conjur-0.3.0-darwin-amd64.tar.gz"
-    sha256 "e680f604c021f4eb88cb53214d41fdf82a7addf804c7f8830c796df3954cd9dd"
+    url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.3.1/terraform-provider-conjur-0.3.1-darwin-amd64.tar.gz"
+    sha256 "7802f2e93bc923ccce02d37b370e36dc5dadc62ff01c2dffb5f2420c4d8da5eb"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.3.0/terraform-provider-conjur-0.3.0-linux-amd64.tar.gz"
-      sha256 "3204a8c5dd740eea795d43a34007167ac973d86d51294fa0b7bcebb93f1f8df8"
+      url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.3.1/terraform-provider-conjur-0.3.1-linux-amd64.tar.gz"
+      sha256 "c1b64bc9618c7dacb6677a977d7b863a353ef0ed42380672cce0e65d359d4137"
     end
   end
   
   depends_on "terraform"
 
   def install
-    bin.install "terraform-provider-conjur"
+    bin.install "terraform-provider-conjur_0.3.1"
   end
 
   def caveats; <<~EOS
     After installation, you must symlink the provider into Terraform's plugins directory.
-    
-    mkdir -p ~/.terraform.d/plugins/
-    ln -sf /usr/local/Cellar/terraform-provider-conjur/$VERSION/bin/terraform-provider-conjur ~/.terraform.d/plugins/terraform-provider-conjur
-    
     Symlinking is necessary because Homebrew is sandboxed and cannot write to your home directory.
-    Replace $VERSION above.
-    If Homebrew is installing somewhere other than /usr/local/Cellar, update the path as well.
+    
+    # Make the plugins directory if not present
+    mkdir -p ~/.terraform.d/plugins/
+    
+    # Remove any old unversioned plugins (if applicable)
+    rm -f  ~/.terraform.d/plugins/terraform-provider-conjur
+    
+    # Symlink the provider to your home dir. If Homebrew is installing somewhere other than /usr/local/Cellar, update the path as well.
+    ln -sf /usr/local/Cellar/terraform-provider-conjur/0.3.1/bin/terraform-provider-conjur_v0.3.1 ~/.terraform.d/plugins/terraform-provider-conjur_v0.3.1
   EOS
   end
 
   test do
-    system "#{bin}/terraform-provider-conjur", "-h"  # running bin directly gives error, exit code 1
+    # Running bin directly gives error, exit code 1
+    system "#{bin}/terraform-provider-conjur_0.3.1", "-h"
   end
 end
