@@ -2,16 +2,16 @@
 class Summon < Formula
   desc "CLI that provides on-demand secrets access for common DevOps tools."
   homepage "https://github.com/cyberark/summon"
-  version "0.8.1"
+  version "0.8.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/cyberark/summon/releases/download/v0.8.1/summon-darwin-amd64.tar.gz"
-    sha256 "e194ca4747d7192ed92b3661be8dfe40e31c8e685599241415ea761e40ce2339"
+    url "https://github.com/cyberark/summon/releases/download/v0.8.2/summon-darwin-amd64.tar.gz"
+    sha256 "50c474e50cb2ab94dcc96ed77df7184b1029fa4c5650006120c856c2137e2b84"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/cyberark/summon/releases/download/v0.8.1/summon-linux-amd64.tar.gz"
-      sha256 "3dafb21abbc0236e57a6e5faa39a951a8287ef8c02210f427f06b101bb177909"
+      url "https://github.com/cyberark/summon/releases/download/v0.8.2/summon-linux-amd64.tar.gz"
+      sha256 "57e47674c52687db6e015915b8a2e3d58adcd624b4ba1a887b10a7395de6d8aa"
     end
   end
 
