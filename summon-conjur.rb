@@ -6,11 +6,11 @@ class SummonConjur < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/cyberark/summon-conjur/releases/download/0.5.4/summon-conjur-darwin-amd64.tar.gz"
+    url "https://github.com/cyberark/summon-conjur/releases/download/v0.5.4/summon-conjur-darwin-amd64.tar.gz"
     sha256 "69fedac08d83f95b525eb645bb8ed7d867f5cf01d9f96dfd0254f51bf131fbf0"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/cyberark/summon-conjur/releases/download/0.5.4/summon-conjur-darwin-amd64.tar.gz"
+    url "https://github.com/cyberark/summon-conjur/releases/download/v0.5.4/summon-conjur-linux-amd64.tar.gz"
     sha256 "b6aca46413b5ab4023f5cbd561d24ed3ae67b4727f77813d0bf5497bdb0c2707"
   end
 
