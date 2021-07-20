@@ -11,18 +11,18 @@ class Summon < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/cyberark/summon/releases/download/v0.9.0/summon-darwin-amd64.tar.gz"
-      sha256 "202d3e48bc939c3747b318e8942d1766526adb64041711da366ff28feca19f35"
+      sha256 "88e750e41437ec8875e1defa6d8aa46d4b0d04411794f8725a19ddd9113adf6f"
     end
     if Hardware::CPU.arm?
       url "https://github.com/cyberark/summon/releases/download/v0.9.0/summon-darwin-arm64.tar.gz"
-      sha256 "25516e0cfd591a49f429fa478a2e5a29d208d055470d7545f5ff83b17c335ea8"
+      sha256 "6e8a805899d09f968c7b0eb8c72c618146198a22b8bbd3e5769a6093df32f1da"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/cyberark/summon/releases/download/v0.9.0/summon-linux-amd64.tar.gz"
-      sha256 "3891a926034ecb8d6e449d4999a070f310f7c5062e2e3fd7a7e56d009283b801"
+      sha256 "323b43d65df6f7dce5c30a1d33df3fa28a95eac4f4212b40346a21dcb7b7416a"
     end
   end
 
