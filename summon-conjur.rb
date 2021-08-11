@@ -5,20 +5,24 @@
 class SummonConjur < Formula
   desc "Conjur provider for Summon"
   homepage "https://github.com/cyberark/summon-conjur"
-  version "0.5.5"
+  version "0.6.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cyberark/summon-conjur/releases/download/v0.5.5/summon-conjur-darwin-amd64.tar.gz"
-      sha256 "3cf85dcb535a6d60823be91d2a6521cbbae61d99c0bea4b4e1b4b678f94b3c1b"
+      url "https://github.com/cyberark/summon-conjur/releases/download/v0.6.0/summon-conjur-darwin-amd64.tar.gz"
+      sha256 "20929561dba59fbb94eda4f1b98c4ad32caaf361423d4060641fd19a2dc923f8"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/cyberark/summon-conjur/releases/download/v0.6.0/summon-conjur-darwin-arm64.tar.gz"
+      sha256 "33f1d6910aacb1f50ff3486583eb6a6370cc833447d6dd3206c30dd319493d38"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cyberark/summon-conjur/releases/download/v0.5.5/summon-conjur-linux-amd64.tar.gz"
-      sha256 "cef5eace1438222dfd4ff0b5ab06c19c21073e9f477dc9ef02ca279e2651e6d4"
+      url "https://github.com/cyberark/summon-conjur/releases/download/v0.6.0/summon-conjur-linux-amd64.tar.gz"
+      sha256 "e1101e018e3f3eab346009d41ee4ccfcb324c2864eaf9bc38d018ddb95662010"
     end
   end
 
