@@ -5,22 +5,31 @@
 class TerraformProviderConjur < Formula
   desc "Terraform provider for CyberArk Conjur"
   homepage "https://github.com/cyberark/terraform-provider-conjur"
-  version "0.5.0"
+  version "0.6.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.5.0/terraform-provider-conjur-0.5.0-darwin-amd64.tar.gz"
-    sha256 "13500229d45fdc5c2b3e9fe56c5ef263756f71cda35ff29e0fc2ec2519465674"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.6.0/terraform-provider-conjur-0.6.0-darwin-amd64.tar.gz"
+      sha256 "cc373541f9c949001c77ca0b1d37bb6382b1dd7813a1fea1473354a058901cda"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.6.0/terraform-provider-conjur-0.6.0-darwin-arm64.tar.gz"
+      sha256 "a54f9ac97b289a4b57f5470bb61625f76524b66ca2c53f1b18a886e19721d31d"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.5.0/terraform-provider-conjur-0.5.0-linux-amd64.tar.gz"
-    sha256 "918ab0c211561de175046c93afd267a93d21b2ec03bb1ffb2437a1461076fedb"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.6.0/terraform-provider-conjur-0.6.0-linux-amd64.tar.gz"
+      sha256 "a39fb72c4a0f66e3b8a56c270c3c445d2f343a4c95f5b332e302945ad6b87be7"
+    end
   end
 
   depends_on "terraform"
 
   def install
-    bin.install "terraform-provider-conjur_v0.5.0"
+    bin.install "terraform-provider-conjur_v0.6.0"
   end
 
   def caveats; <<~EOS
@@ -34,12 +43,12 @@ class TerraformProviderConjur < Formula
     rm -f  ~/.terraform.d/plugins/terraform-provider-conjur
 
     # Symlink the provider to your home dir. If Homebrew is installing somewhere other than /usr/local/Cellar, update the path as well.
-    ln -sf /usr/local/Cellar/terraform-provider-conjur/0.5.0/bin/terraform-provider-conjur_v0.5.0 ~/.terraform.d/plugins/terraform-provider-conjur_v0.5.0
+    ln -sf /usr/local/Cellar/terraform-provider-conjur/0.6.0/bin/terraform-provider-conjur_v0.6.0 ~/.terraform.d/plugins/terraform-provider-conjur_v0.6.0
   EOS
   end
 
   test do
     # Running bin directly gives error, exit code 1
-    system "#{bin}/terraform-provider-conjur_v0.5.0", "-h"
+    system "#{bin}/terraform-provider-conjur_v0.6.0", "-h"
   end
 end
