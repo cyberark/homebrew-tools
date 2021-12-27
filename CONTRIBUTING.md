@@ -14,3 +14,11 @@ For general contribution and community guidelines, please see the [community rep
 From here your pull request will be reviewed and once you've responded to all
 feedback it will be merged into the project. Congratulations, you're a
 contributor!
+
+## Releasing
+
+To update the Brew formula files follow the instructions in the release
+section of the formula repositories.
+
+For example to update `summon.rb` follow the instructions on
+the [Summon release page](https://github.com/cyberark/summon/blob/main/CONTRIBUTING.md#releasing).
