@@ -5,29 +5,36 @@
 class Summon < Formula
   desc "CLI that provides on-demand secrets access for common DevOps tools."
   homepage "https://github.com/cyberark/summon"
-  version "0.9.0"
-  bottle :unneeded
+  version "0.9.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/cyberark/summon/releases/download/v0.9.0/summon-darwin-amd64.tar.gz"
-      sha256 "88e750e41437ec8875e1defa6d8aa46d4b0d04411794f8725a19ddd9113adf6f"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/cyberark/summon/releases/download/v0.9.0/summon-darwin-arm64.tar.gz"
-      sha256 "6e8a805899d09f968c7b0eb8c72c618146198a22b8bbd3e5769a6093df32f1da"
+      url "https://github.com/cyberark/summon/releases/download/v0.9.1/summon-darwin-arm64.tar.gz"
+      sha256 "2359dff2a4a556e5308441da148923f38dcf9ae2e4a13ef5d5703fb361fea221"
+
+      def install
+        bin.install "summon"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/cyberark/summon/releases/download/v0.9.1/summon-darwin-amd64.tar.gz"
+      sha256 "37897a271b569acffe775c1e24f8a62e4be56e991322cd4dc836e943bbf4ba72"
+
+      def install
+        bin.install "summon"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cyberark/summon/releases/download/v0.9.0/summon-linux-amd64.tar.gz"
-      sha256 "323b43d65df6f7dce5c30a1d33df3fa28a95eac4f4212b40346a21dcb7b7416a"
-    end
-  end
+      url "https://github.com/cyberark/summon/releases/download/v0.9.1/summon-linux-amd64.tar.gz"
+      sha256 "fc53167b12bea5003e3c6177ad08a0b98c3f9e12145f0b3187a440afeffa064b"
 
-  def install
-    bin.install "summon"
+      def install
+        bin.install "summon"
+      end
+    end
   end
 
   test do
