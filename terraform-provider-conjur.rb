@@ -6,7 +6,6 @@ class TerraformProviderConjur < Formula
   desc "Terraform provider for CyberArk Conjur"
   homepage "https://github.com/cyberark/terraform-provider-conjur"
   version "0.6.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
