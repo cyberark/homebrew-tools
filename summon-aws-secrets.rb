@@ -5,21 +5,21 @@
 class SummonAwsSecrets < Formula
   desc "AWS Secrets Manager provider for Summon"
   homepage "https://github.com/cyberark/summon-aws-secrets"
-  version "0.4.1"
+  version "0.4.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/cyberark/summon-aws-secrets/releases/download/v0.4.1/summon-aws-secrets-darwin-amd64.tar.gz"
-      sha256 "8ea2d42eaba79153f12c1b2c0f2394ed51d5f4448f0f666a903556ac032fe036"
+    if Hardware::CPU.arm?
+      url "https://github.com/cyberark/summon-aws-secrets/releases/download/v0.4.2/summon-aws-secrets-darwin-arm64.tar.gz"
+      sha256 "ba9b88bd78542ab8a5d7c73c1848ee32707fdc679e56d4143763f8b6e54920cf"
 
       def install
         target = lib/"summon"
         target.install "summon-aws-secrets"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/cyberark/summon-aws-secrets/releases/download/v0.4.1/summon-aws-secrets-darwin-arm64.tar.gz"
-      sha256 "ccdc5c20cb0d08d13aba4e21deeb98b5dcf0457af36e25c7e269758db801661e"
+    if Hardware::CPU.intel?
+      url "https://github.com/cyberark/summon-aws-secrets/releases/download/v0.4.2/summon-aws-secrets-darwin-amd64.tar.gz"
+      sha256 "3939c011a78b7dd4e07ad3f814dc7d6b10797aec6f8409e0b0b485f3cec19f08"
 
       def install
         target = lib/"summon"
@@ -30,8 +30,8 @@ class SummonAwsSecrets < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cyberark/summon-aws-secrets/releases/download/v0.4.1/summon-aws-secrets-linux-amd64.tar.gz"
-      sha256 "9c560625a48c2350b1cdfa2c3fb645d145f9b2913a3ef06eafc3e6770ccc87ad"
+      url "https://github.com/cyberark/summon-aws-secrets/releases/download/v0.4.2/summon-aws-secrets-linux-amd64.tar.gz"
+      sha256 "f15bdb52610aa3e3fe291b05341093ad3c99d5e6607ac95b86cfd3cd57afd53a"
 
       def install
         target = lib/"summon"
