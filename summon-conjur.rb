@@ -5,21 +5,21 @@
 class SummonConjur < Formula
   desc "Conjur provider for Summon"
   homepage "https://github.com/cyberark/summon-conjur"
-  version "0.6.3"
+  version "0.6.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/cyberark/summon-conjur/releases/download/v0.6.3/summon-conjur-darwin-arm64.tar.gz"
-      sha256 "1d76e4277bdfd9475b0ebd83d96368d807ac9cecd48beb46b3d835bc52b4d9e5"
+    if Hardware::CPU.intel?
+      url "https://github.com/cyberark/summon-conjur/releases/download/v0.6.4/summon-conjur-darwin-amd64.tar.gz"
+      sha256 "6bcbeb788f92a821891fabe4ad981ca585b44a35fcabee15d6e2e24d58b74acb"
 
       def install
         target = lib/"summon"
         target.install "summon-conjur"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/cyberark/summon-conjur/releases/download/v0.6.3/summon-conjur-darwin-amd64.tar.gz"
-      sha256 "8ea9adc160aed71bc30ec8fd2aae55e0d5c8e0347b73799b9b951d8bd55baff1"
+    if Hardware::CPU.arm?
+      url "https://github.com/cyberark/summon-conjur/releases/download/v0.6.4/summon-conjur-darwin-arm64.tar.gz"
+      sha256 "0f7f5de803508143e9df253d53d0038ce35215ed02f7cd396e54fe48dc38d750"
 
       def install
         target = lib/"summon"
@@ -30,8 +30,8 @@ class SummonConjur < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cyberark/summon-conjur/releases/download/v0.6.3/summon-conjur-linux-amd64.tar.gz"
-      sha256 "1a02ec27c10ee940550c1193a7987dd7ee0bc581ecacd59bf027b59f4de2d071"
+      url "https://github.com/cyberark/summon-conjur/releases/download/v0.6.4/summon-conjur-linux-amd64.tar.gz"
+      sha256 "55de25051a3d04aa0e8b6d398eaccc26bcc5daf2a61dca9e4f11f63b4ad0b15e"
 
       def install
         target = lib/"summon"
