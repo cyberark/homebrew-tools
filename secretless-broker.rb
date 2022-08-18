@@ -5,20 +5,20 @@
 class SecretlessBroker < Formula
   desc "Secures your apps by making them Secretless"
   homepage "https://secretless.io"
-  version "1.7.12"
+  version "1.7.14"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cyberark/secretless-broker/releases/download/v1.7.12/secretless-broker_1.7.12_darwin_arm64.tar.gz"
-      sha256 "ca0e094ecb49f2aacd2cccaf88448b41e7e8accc4b524e8c35be8236d9f701ba"
+      url "https://github.com/cyberark/secretless-broker/releases/download/v1.7.14/secretless-broker_1.7.14_darwin_arm64.tar.gz"
+      sha256 "2562e4b988a9819cba2cd4f22ab2b20567ce393e1f2b0719704713e9df700e33"
 
       def install
         bin.install "secretless-broker"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cyberark/secretless-broker/releases/download/v1.7.12/secretless-broker_1.7.12_darwin_amd64.tar.gz"
-      sha256 "cf6daa3efd811864cf0d96ebc74544d91b8bc4322f30019069d471c3ae0caa53"
+      url "https://github.com/cyberark/secretless-broker/releases/download/v1.7.14/secretless-broker_1.7.14_darwin_amd64.tar.gz"
+      sha256 "5f263686d5c1fa5bb1343c7922e82e55d22d0ee91609769a941da85273aa8a6f"
 
       def install
         bin.install "secretless-broker"
@@ -28,8 +28,8 @@ class SecretlessBroker < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cyberark/secretless-broker/releases/download/v1.7.12/secretless-broker_1.7.12_linux_amd64.tar.gz"
-      sha256 "eecef1aba134bff8a9a5fcd92d6bf825aa76d218a29dbceefdab28d96f2918cb"
+      url "https://github.com/cyberark/secretless-broker/releases/download/v1.7.14/secretless-broker_1.7.14_linux_amd64.tar.gz"
+      sha256 "9bd44ed1f8080a723ed7a28070e309573a89caccb8093d4f56aa9f4ecb35ace9"
 
       def install
         bin.install "secretless-broker"
