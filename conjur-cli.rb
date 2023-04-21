@@ -5,20 +5,20 @@
 class ConjurCli < Formula
   desc "CyberArk Conjur command line interface"
   homepage "https://conjur.org"
-  version "8.0.5"
+  version "8.0.9"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.5/conjur-cli-go_8.0.5_darwin_amd64.tar.gz"
-      sha256 "57be51b591b19a8a5953c6d1640d8cfa95bc62928cbc92063884484fd0c99784"
+      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.9/conjur-cli-go_8.0.9_darwin_amd64.tar.gz"
+      sha256 "a96d61dc169300b7f497e37b6a0872704b208fdacb00b2f960f606c7f737da46"
 
       def install
         bin.install "conjur"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.5/conjur-cli-go_8.0.5_darwin_arm64.tar.gz"
-      sha256 "87096e1eb1dbaaa8c31dd552796bdf02fd3c375d3ba0d6d6de9fe9a4698e897d"
+      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.9/conjur-cli-go_8.0.9_darwin_arm64.tar.gz"
+      sha256 "963f2eb8bb74925782cc710d614795c7ec14a41a77930314e185c4e1a579f51a"
 
       def install
         bin.install "conjur"
@@ -28,16 +28,16 @@ class ConjurCli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.5/conjur-cli-go_8.0.5_linux_arm64.tar.gz"
-      sha256 "56800e4427b6ebd1924c3981d28ff488728874016fc2c916b386e2d235bf54bb"
+      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.9/conjur-cli-go_8.0.9_linux_arm64.tar.gz"
+      sha256 "f042f5296864dbe0e1a3c6b4a97acd82cac1f1deae56f028cb2e7d432946c884"
 
       def install
         bin.install "conjur"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.5/conjur-cli-go_8.0.5_linux_amd64.tar.gz"
-      sha256 "ef3a1267954e299ae897cd68f7799cc1df3a535963716dbc0dc4aa8cb565199a"
+      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.9/conjur-cli-go_8.0.9_linux_amd64.tar.gz"
+      sha256 "19169dbac90681bc4bc7db077c3fc025a283ed9fbef9b9515b9960e2a47d8b29"
 
       def install
         bin.install "conjur"
