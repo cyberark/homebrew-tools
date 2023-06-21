@@ -5,36 +5,36 @@
 class TerraformProviderConjur < Formula
   desc "Terraform provider for CyberArk Conjur"
   homepage "https://github.com/cyberark/terraform-provider-conjur"
-  version "0.6.4"
+  version "0.6.6"
 
   depends_on "terraform"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.6.4/terraform-provider-conjur_0.6.4_darwin_arm64.zip"
-      sha256 "207db94c8f1a6b4c5be7f43ca3b8609c5df44f5b991c1af6448176f517f42fd7"
+      url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.6.6/terraform-provider-conjur_0.6.6_darwin_arm64.zip"
+      sha256 "49b65b09c2abd0fb1f789b01a6b878c620ae2656a9b6198f45dcd7396ac39462"
 
       def install
-        bin.install "terraform-provider-conjur_v0.6.4"
+        bin.install "terraform-provider-conjur_v0.6.6"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.6.4/terraform-provider-conjur_0.6.4_darwin_amd64.zip"
-      sha256 "7c2b5963870d04549c591edaa78f09ea8888c1aba99b4a4bcf83aa30a68ebe7d"
+      url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.6.6/terraform-provider-conjur_0.6.6_darwin_amd64.zip"
+      sha256 "6bc45004997e7a795c024a167465e5f77ba4233ce41e79a27e4cca9e129b55f5"
 
       def install
-        bin.install "terraform-provider-conjur_v0.6.4"
+        bin.install "terraform-provider-conjur_v0.6.6"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.6.4/terraform-provider-conjur_0.6.4_linux_amd64.zip"
-      sha256 "9b26952621775aa904ec02cc72edbaa70cefbc0a96575a0f55fc08570a193d73"
+      url "https://github.com/cyberark/terraform-provider-conjur/releases/download/v0.6.6/terraform-provider-conjur_0.6.6_linux_amd64.zip"
+      sha256 "24bbe9fd14a3b80932a1909285382e3d81acb02870418c9cd8d380b3849594e8"
 
       def install
-        bin.install "terraform-provider-conjur_v0.6.4"
+        bin.install "terraform-provider-conjur_v0.6.6"
       end
     end
   end
@@ -51,12 +51,12 @@ class TerraformProviderConjur < Formula
       rm -f  ~/.terraform.d/plugins/terraform-provider-conjur
 
       # Symlink the provider to your home dir. If Homebrew is installing somewhere other than /usr/local/Cellar, update the path as well.
-      ln -sf /usr/local/Cellar/terraform-provider-conjur/0.6.4/bin/terraform-provider-conjur_v0.6.4 ~/.terraform.d/plugins/terraform-provider-conjur_v0.6.4
+      ln -sf /usr/local/Cellar/terraform-provider-conjur/0.6.6/bin/terraform-provider-conjur_v0.6.6 ~/.terraform.d/plugins/terraform-provider-conjur_v0.6.6
     EOS
   end
 
   test do
     # Running bin directly gives error, exit code 1
-    system "#{bin}/terraform-provider-conjur_v0.6.4", "-h"
+    system "#{bin}/terraform-provider-conjur_v0.6.6", "-h"
   end
 end
