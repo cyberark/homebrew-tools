@@ -5,20 +5,20 @@
 class ConjurCli < Formula
   desc "CyberArk Conjur command line interface"
   homepage "https://conjur.org"
-  version "8.0.9"
+  version "8.0.10-356"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.9/conjur-cli-go_8.0.9_darwin_amd64.tar.gz"
-      sha256 "a96d61dc169300b7f497e37b6a0872704b208fdacb00b2f960f606c7f737da46"
+    if Hardware::CPU.arm?
+      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.10/conjur-cli-go_8.0.10_darwin_arm64.tar.gz"
+      sha256 "5f897d3eb407db005693211e3216e632170c6ff3555f85e82746fc93127ba521"
 
       def install
         bin.install "conjur"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.9/conjur-cli-go_8.0.9_darwin_arm64.tar.gz"
-      sha256 "963f2eb8bb74925782cc710d614795c7ec14a41a77930314e185c4e1a579f51a"
+    if Hardware::CPU.intel?
+      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.10/conjur-cli-go_8.0.10_darwin_amd64.tar.gz"
+      sha256 "3bdb08304c054b7d38afcc775853fad86980f7b4fc7cc0b51a6e0f57181958ed"
 
       def install
         bin.install "conjur"
@@ -27,17 +27,17 @@ class ConjurCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.9/conjur-cli-go_8.0.9_linux_arm64.tar.gz"
-      sha256 "f042f5296864dbe0e1a3c6b4a97acd82cac1f1deae56f028cb2e7d432946c884"
+    if Hardware::CPU.intel?
+      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.10/conjur-cli-go_8.0.10_linux_amd64.tar.gz"
+      sha256 "9dbb65fb57acf39f6a1bf8135e6f613d8605482ef3c0ba6d97f3152a8e3a2fb0"
 
       def install
         bin.install "conjur"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.9/conjur-cli-go_8.0.9_linux_amd64.tar.gz"
-      sha256 "19169dbac90681bc4bc7db077c3fc025a283ed9fbef9b9515b9960e2a47d8b29"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/cyberark/conjur-cli-go/releases/download/v8.0.10/conjur-cli-go_8.0.10_linux_arm64.tar.gz"
+      sha256 "a11463300fd6108481858b66983b9576c446c792d211ce5f3bd100dfc26b7649"
 
       def install
         bin.install "conjur"
