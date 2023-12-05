@@ -17,8 +17,7 @@ contributor!
 
 ## Releasing
 
-To update the Brew formula files follow the instructions in the release
-section of the formula repositories.
+The formulae in this repo use github-update.rb to find the latest release of each packaged tool. This means that this repo doesn't
+have to be updated when the individual tools (eg summon) are updated.
 
-For example to update `summon.rb` follow the instructions on
-the [Summon release page](https://github.com/cyberark/summon/blob/main/CONTRIBUTING.md#releasing).
+To release a new version of a homebrew packaged tool, all thats required is to create a new github release in that repository.
