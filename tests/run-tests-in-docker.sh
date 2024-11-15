@@ -8,7 +8,7 @@ set -euo pipefail
 if command -v security &>/dev/null; then
     # on MacOS
     security find-certificate \
-      -a -c "CyberArk Enterprise Root CA" \
+      -a -c "CyberArk Root CA" \
       -p > cyberark_root.crt
 else
     # On linux / Jenkins Agent, don't need the internal
