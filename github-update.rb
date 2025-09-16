@@ -69,7 +69,7 @@ class GithubUpdate
     ver = latest["tag_name"].delete_prefix("v")
 
     # Get list of artifacts from release
-    artifacts_uri = URI.parse(latest["assets_url"])
+    artifacts_uri = URI.parse(latest["assets_url"] + "?per_page=40")
     artifacts_response = self.get_with_redirect(artifacts_uri)
     artifacts_json = JSON.parse(artifacts_response.body)
 
