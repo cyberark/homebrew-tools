@@ -9,7 +9,7 @@ require_relative 'github-update'
 class TerraformProviderConjur < Formula
   @@repo = "cyberark/terraform-provider-conjur"
   @@ver, @@artifacts = GithubUpdate.getLatestRelease(@@repo)
-  desc "Terraform provider for CyberArk Conjur"
+  desc "Terraform provider for CyberArk Secrets Manager"
   homepage "https://github.com/#{@@repo}"
   version @@ver
 
