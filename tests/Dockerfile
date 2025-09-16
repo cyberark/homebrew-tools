@@ -1,5 +1,11 @@
 FROM ubuntu:latest
 
+# This allows `brew install` when using `brew tap` with `--build-from-source`
+# The default behavior around this was
+# [changed in homebrew 4.6.4](https://github.com/orgs/Homebrew/discussions/6351#discussioncomment-14207623).
+# See [the PR for the change](https://github.com/Homebrew/brew/pull/20414) for more details.
+ENV HOMEBREW_DEVELOPER=1
+
 RUN \
     --mount=type=cache,target=/var/cache/apt \
     apt-get update \
