@@ -9,7 +9,7 @@ require_relative 'github-update'
 class SummonConjur < Formula
   @@repo = "cyberark/summon-conjur"
   @@ver, @@artifacts = GithubUpdate.getLatestRelease(@@repo)
-  desc "Conjur provider for Summon"
+  desc "CyberArk Secrets Manager provider for Summon"
   homepage "https://github.com/#{@@repo}"
   version @@ver
 

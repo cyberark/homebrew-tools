@@ -9,7 +9,7 @@ require_relative 'github-update'
 class ConjurCli < Formula
   @@repo = "cyberark/conjur-cli-go"
   @@ver, @@artifacts = GithubUpdate.getLatestRelease(@@repo)
-  desc "CyberArk Conjur command line interface"
+  desc "CyberArk Secrets Manager command line interface"
   homepage "https://github.com/#{@@repo}"
   version @@ver
 
