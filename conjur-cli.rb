@@ -13,7 +13,7 @@ class ConjurCli < Formula
   homepage "https://github.com/#{@@repo}"
   version @@ver
 
-  @@artifact = @@artifacts["conjur-cli-go_#{@@ver}_#{OS.kernel_name.downcase}_#{GithubUpdate.arch(Hardware::CPU.type)}.tar.gz"]
+  @@artifact = @@artifacts["conjur-cli_#{@@ver}_#{OS.kernel_name.downcase}_#{GithubUpdate.arch(Hardware::CPU.type)}.tar.gz"]
   url @@artifact["url"]
   sha256 @@artifact["hash"]
 
