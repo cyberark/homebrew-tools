@@ -14,4 +14,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Pipeline
 - Self Updating formula for Summon.
 
-[0.0.2]: https://github.com/cyberark/conjur-quickstart/releases/tag/v0.0.2
+[0.0.2]: https://github.com/cyberark/homebrew-tools/compare/v0.0.1...v0.0.2
