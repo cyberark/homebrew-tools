@@ -6,8 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.0.2] - 2025-10-08
 ### Changed
-  - Removed -go suffix when searching for conjur-cli artifact - CNJR-11406
-  - Description now references Secrets Manager instead of Conjur 
+- Removed -go suffix when searching for conjur-cli artifact - CNJR-11406
+- Description now references Secrets Manager instead of Conjur
 
 ## [0.0.1] - 2023-11-09
 ### Added
