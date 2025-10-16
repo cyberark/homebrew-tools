@@ -4,9 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [0.0.2] - 2025-10-16
+
+### Changed
+- Updated documentation to align with Conjur Enterprise name change to Secrets Manager. (CNJR-10998)
 
 ## [0.0.1] - 2023-11-09
 
 ### Added
 - Pipeline
 - Self Updating formula for Summon.
+
+[Unreleased]: https://github.com/cyberark/homebrew-tools/compare/v0.0.2...HEAD
+[0.0.2]: https://github.com/cyberark/homebrew-tools/releases/tag/v0.0.2
+[0.0.1]: https://github.com/cyberark/homebrew-tools/releases/tag/v0.0.1
