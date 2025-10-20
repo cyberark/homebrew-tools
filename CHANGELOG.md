@@ -7,11 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.0.2][] - 2025-10-08
 ### Changed
 -   Removed -go suffix when searching for conjur-cli artifact - CNJR-11406
--   Description now references Secrets Manager instead of Conjur
+-   Updated documentation to align with Conjur Enterprise name change to Secrets Manager. (CNJR-10998)
 
 ## [0.0.1] - 2023-11-09
 ### Added
 - Pipeline
 - Self Updating formula for Summon.
 
-[0.0.2]: https://github.com/cyberark/homebrew-tools/compare/v0.0.1...v0.0.2
+[Unreleased]: https://github.com/cyberark/homebrew-tools/compare/v0.0.2...HEAD
+[0.0.2]: https://github.com/cyberark/homebrew-tools/releases/tag/v0.0.2
+[0.0.1]: https://github.com/cyberark/homebrew-tools/releases/tag/v0.0.1
