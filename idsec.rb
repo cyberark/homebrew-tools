@@ -18,8 +18,6 @@ class Idsec < Formula
   sha256 @@artifact["hash"]
 
   def install
-    # The GoReleaser build emits per-OS binary names (idsec-darwin / idsec-linux);
-    # rename to plain `idsec` so the user has a clean command on PATH.
     if OS.mac?
       bin.install "idsec-darwin" => "idsec"
     else
