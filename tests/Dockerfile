@@ -9,7 +9,13 @@ ENV HOMEBREW_DEVELOPER=1
 RUN \
     --mount=type=cache,target=/var/cache/apt \
     apt-get update \
-    && apt-get -y --no-install-recommends install build-essential ca-certificates git curl gcc \
+    && apt-get -y --no-install-recommends install \
+        bubblewrap \
+        build-essential \
+        ca-certificates \
+        git \
+        curl \
+        gcc \
     && apt-get clean
 COPY cyberark_root.crt /usr/local/share/ca-certificates
 RUN update-ca-certificates
@@ -22,10 +28,5 @@ RUN useradd -m -N $USER && \
     chown -R ${USER}:0 /home/linuxbrew
 USER ${USER}
 RUN CI=true ./tests/install-brew.sh
-
-# Install Terraform, which is required in order to install the Conjur Terraform provider
-ENV PATH=$PATH:/home/linuxbrew/.linuxbrew/bin/
-RUN brew tap hashicorp/tap && \
-    brew install hashicorp/tap/terraform
 
 CMD ["bash", "-c", "'./tests/test-all.sh'"]

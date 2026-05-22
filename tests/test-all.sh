@@ -3,6 +3,10 @@ set -ueo pipefail
 
 export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
 
+# Install dependencies
+brew tap hashicorp/tap
+brew install --verbose --debug hashicorp/tap/terraform
+
 formulae=(
     summon
     summon-conjur
