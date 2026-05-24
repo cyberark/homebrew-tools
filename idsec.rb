@@ -26,6 +26,6 @@ class Idsec < Formula
   end
 
   test do
-    system "#{bin}/idsec", "--version"
+    system "#{bin}/idsec", "version"
   end
 end
