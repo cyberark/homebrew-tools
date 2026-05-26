@@ -5,6 +5,11 @@ require 'json'
 # Get release info from github
 # Extracted into a class so it can be shared by multiple formulae.
 
+# This class retries HTTP requests if they fail on transient errors up to
+# MAX_ATTEMPTS times. MAX_ATTEMPTS applies to each unique request - if there are
+# redirects, MAX_ATTEMPTS may be exceeded cumulatively across all requests.
+MAX_ATTEMPTS = 5
+
 class GithubUpdate
   # net::http doesn't handle redirects, so we have to handle them
   # here. It also doesnt have raise_for_status (like python requests)
@@ -27,9 +32,23 @@ class GithubUpdate
         # to be specified.
         request["Authorization"] = "token #{ENV['HOMEBREW_GITHUB_PACKAGE_TOKEN']}"
       end
-      response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { |http|
-        http.request(request)
-      }
+
+      request_attempt = 0
+      begin
+        request_attempt += 1
+        response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { |http|
+          http.request(request)
+        }
+
+      rescue OpenSSL::SSL::SSLError => error
+        raise "Failed to connect to #{uri.hostname}:#{uri.port}: #{error.class} #{error.message}" if request_attempt >= MAX_ATTEMPTS
+
+        puts "Encountered error connecting to #{uri}: #{error.class} #{error.message}"
+        puts "  Retrying (#{request_attempt}/#{MAX_ATTEMPTS})..."
+        sleep request_attempt
+        retry
+      end
+
       redirect = response.header['location']
       if redirect != nil
         uri = URI.parse(response.header['location'])

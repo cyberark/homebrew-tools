@@ -3,6 +3,10 @@ set -ueo pipefail
 
 export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
 
+# Install dependencies
+brew tap hashicorp/tap
+brew install --verbose --debug hashicorp/tap/terraform
+
 formulae=(
     summon
     summon-conjur
@@ -10,6 +14,7 @@ formulae=(
     terraform-provider-conjur
     secretless-broker
     conjur-cli
+    idsec
 )
 
 for formula in ${formulae[@]}; do
