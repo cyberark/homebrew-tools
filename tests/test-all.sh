@@ -14,6 +14,7 @@ formulae=(
     terraform-provider-conjur
     secretless-broker
     conjur-cli
+    idsec
 )
 
 for formula in ${formulae[@]}; do
