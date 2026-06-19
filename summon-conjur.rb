@@ -1,7 +1,7 @@
 # typed: false
 # frozen_string_literal: true
 
-require_relative 'github-update'
+require_relative 'lib/github-update'
 
 # This formulae will fetch the latest release from github. Versioning is
 # still functional so homebrew will know which version is installed and
