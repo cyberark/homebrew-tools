@@ -20,13 +20,13 @@ formulae=(
 for formula in ${formulae[@]}; do
     brew install --debug --build-from-source "./${formula}.rb"
     # Installing the formula works without inteverention,
-    # but testing fails without copying github-update.rb because during
+    # but testing fails without copying lib/github-update.rb because during
     # testing the formula is run from an isloated location, not from
     # within the repo.
-    # To allow testing to work, we copy in github-update.rb.
+    # To allow testing to work, we copy in lib/github-update.rb.
 done
 
 for formula in ${formulae[@]}; do
-    cp github-update.rb /home/linuxbrew/.linuxbrew/opt/${formula}/.brew/
+    cp lib/github-update.rb /home/linuxbrew/.linuxbrew/opt/${formula}/.brew/
     brew test --debug "${formula}"
 done
